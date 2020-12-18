@@ -99,7 +99,7 @@ function setup() {
   console.log(database);
   foodobject=new Food()
   dog = createSprite(550,250,10,10);
-  dog.addImage(dogimg1)
+  dog.addImage(dog1)
   dog.scale=0.2
 
   foodStock = database.ref('Food')
@@ -200,7 +200,7 @@ function FeedDog(){
   if(foodS>0){
     pt = frameCount;
 
-    dog.addImage(dogimg2) 
+    dog.addImage(dog2) 
   foodobject.updateFoodStock(foodobject.getFoodStock()-1)
    database.ref('/').update({
      Food:foodobject.getFoodStock(),
